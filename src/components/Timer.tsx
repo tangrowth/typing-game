@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import timerImage from '../assets/images/timer.png';
+import resetButton from '../assets/images/stop-button.png'
+import { clear } from 'console';
 
 function Timer() {
   /** 制限時間の設定 */
@@ -9,9 +12,9 @@ function Timer() {
   return (
     <div>
       <div>
-        <img src="../assets/images/timer.png" alt="" />制限時間: ~s
+        <img src={timerImage} alt="" />制限時間: ~s
       </div>
-      <img src="../assets/images/stop-button.png" alt="リセット" />
+      <img src={resetButton} alt="リセット" />
     </div>
   )
 }
